@@ -94,7 +94,12 @@ async function loadExpenses() {
     tbody.innerHTML = "";
 
     data.forEach(exp => {
-        const date = exp.date ? new Date(exp.date).toLocaleDateString() : 'N/A';
+        let date = 'N/A';
+        if (exp.date) {
+            // SQLite TIMESTAMP DEFAULT CURRENT_TIMESTAMP is in UTC 'YYYY-MM-DD HH:MM:SS'
+            // We can replace the space with 'T' to make it ISO format for better parsing
+            date = new Date(exp.date.replace(' ', 'T') + 'Z').toLocaleDateString();
+        }
         const row = `
         <tr>
             <td>${date}</td>

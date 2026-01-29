@@ -1,11 +1,7 @@
-CREATE DATABASE IF NOT EXISTS ai_expense_tracker;
-
-USE ai_expense_tracker;
-
 CREATE TABLE IF NOT EXISTS expenses (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    amount DECIMAL(10, 2) NOT NULL,
-    category VARCHAR(50) NOT NULL,
-    description VARCHAR(255) NOT NULL,
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    amount REAL NOT NULL,
+    category TEXT NOT NULL,
+    description TEXT NOT NULL,
     date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

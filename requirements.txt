@@ -1,4 +1,4 @@
 flask
-mysql-connector-python
 google-genai
 python-dotenv
+gunicorn
