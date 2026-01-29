@@ -5,8 +5,13 @@
 __pycache__/
 *.pyc
 
-# IDE
+# IDEs
 .idea/
+.vscode/
 
-# Local DB
+# Databases
 *.db
+
+# OS files
+.DS_Store
+
