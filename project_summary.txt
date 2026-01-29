@@ -1,0 +1,26 @@
+### AI Expense Tracker - Project Summary
+
+This project is a web-based Expense Tracker application integrated with Google Gemini AI to provide financial insights. It is built using Flask (Python) and a MySQL database.
+
+#### Key Features:
+- **Expense Management:** Users can add expenses with an amount, description, and category (e.g., Food, Travel, Shopping, etc.).
+- **Deletion:** Users can remove individual expenses from the list.
+- **AI Financial Assistant:** Integrated with the `google-genai` SDK using the `gemini-2.0-flash-lite` model. Users can ask natural language questions about their spending habits.
+- **Optimized AI Queries:** The backend calculates summaries (total spent, count) and sends only the 10 most recent expenses to the AI to save tokens and improve response time.
+- **Modern UI:** A clean, card-based responsive design with Font Awesome icons and color-coded category badges.
+- **Robust Error Handling:** Includes handling for API quota limits (429), invalid API keys, and missing models.
+
+#### Technical Stack:
+- **Backend:** Flask (Python)
+- **Database:** MySQL
+- **AI Integration:** Google GenAI SDK (Gemini API)
+- **Frontend:** HTML5, CSS3, JavaScript (Fetch API)
+- **Configuration:** Managed via `.env` file for security.
+
+#### Project Structure:
+- `app.py`: Main Flask application handling routing, database connections, and AI logic.
+- `schema.sql`: Database schema definition for the `expenses` table.
+- `templates/index.html`: Main frontend interface.
+- `static/style.css`: Custom styling for the application.
+- `requirements.txt`: Python dependencies.
+- `.env`: Environment variables (API keys, DB credentials).

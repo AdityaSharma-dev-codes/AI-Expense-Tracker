@@ -1,0 +1,146 @@
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #50c878;
+    --bg-color: #f0f2f5;
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: var(--shadow);
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #555;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.form-group, .ai-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+input, select, button {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+input[type="number"] { width: 100px; }
+input[type="text"] { flex: 1; min-width: 200px; }
+
+button {
+    cursor: pointer;
+    font-weight: 600;
+    border: none;
+    color: white;
+}
+
+.btn-primary { background-color: var(--primary-color); }
+.btn-primary:hover { background-color: #357abd; }
+
+.btn-secondary { background-color: var(--secondary-color); }
+.btn-secondary:hover { background-color: #3dae60; }
+
+.btn-delete {
+    background-color: #ff7675;
+    padding: 6px 10px;
+    font-size: 14px;
+}
+.btn-delete:hover {
+    background-color: #d63031;
+}
+
+.ai-response {
+    margin-top: 15px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 4px;
+    display: none;
+}
+
+.ai-response.active {
+    display: block;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #666;
+}
+
+.amount {
+    font-weight: 600;
+    color: #e74c3c;
+}
+
+.category-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.category-badge.food { background: #ffeaa7; color: #d35400; }
+.category-badge.travel { background: #81ecec; color: #0097e6; }
+.category-badge.shopping { background: #fab1a0; color: #e17055; }
+.category-badge.bills { background: #ff7675; color: #d63031; }
+.category-badge.groceries { background: #55efc4; color: #00b894; }
+.category-badge.entertainment { background: #a29bfe; color: #6c5ce7; }
+.category-badge.other { background: #dfe6e9; color: #636e72; }
