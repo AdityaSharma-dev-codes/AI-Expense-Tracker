@@ -1,0 +1,12 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# IDE
+.idea/
+
+# Local DB
+*.db
